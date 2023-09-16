@@ -20,7 +20,7 @@ The slash commands below are added so you can easily see the lists of resolution
 
 | Command | Resolution List | Output |
 | --- | --- | --- |
-| `/listres` | Original from GetScreenResolutions() | `<ID>: <Resolution>` | 
+| `/listres` | Original from [GetScreenResolutions()](https://wowpedia.fandom.com/wiki/API_GetScreenResolutions?oldid=234457) | `<ID>: <Resolution>` | 
 | `/listfres` | Filtered  | `<New ID> [<Original ID>]: <Resolution>` |
 
 ## Installation
