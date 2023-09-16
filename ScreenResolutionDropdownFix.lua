@@ -29,7 +29,7 @@ local whitelist = {
 local resolutionList = {}
 local resolutionsToOriginalIds = {}
 local originalIdsToMyIds = {}
-local allowedResolutions = {}
+local allowedResolutions
 
 
 --//////////////////////////////////////////////////////////////////////////--
@@ -85,11 +85,12 @@ local function GetFilteredScreenResolutions()
     -- Whitelist mode
     if whitelistMode then
 
-        tclear(allowedResolutions)
-
-        -- Put whitelist resolutions as table keys so it's easier to process
-        for _, resolution in whitelist do
-            allowedResolutions[resolution] = resolution
+        -- Set whitelist resolutions as table keys so it's easy to determine what's allowed
+        if allowedResolutions == nil then
+            allowedResolutions = {}
+            for _, resolution in whitelist do
+                allowedResolutions[resolution] = resolution
+            end
         end
 
         -- Add whitelisted entries from the original list of resolutions
@@ -102,11 +103,7 @@ local function GetFilteredScreenResolutions()
 
     -- Only the top 32 resolutions
     else
-        local start = getn(availableResolutions) - UIDROPDOWNMENU_MAXBUTTONS + 1
-        if start < 1 then
-            start = 1
-        end
-        for id = start, getn(availableResolutions) do
+        for id = math.max(getn(availableResolutions) - UIDROPDOWNMENU_MAXBUTTONS + 1, 1), getn(availableResolutions) do
             addResolution(availableResolutions[id], id)
         end
     end
@@ -141,14 +138,14 @@ SlashCmdList["PrintFilteredResolutions"] = function() PrintResolutions(true) end
 -- HideScriptErrorFrameAtLogin functionality
 --//////////////////////////////////////////////////////////////////////////--
 if (ScriptErrors:IsShown()) then
-    local e = ScriptErrors_Message:GetText();
-    DEFAULT_CHAT_FRAME:AddMessage("Script error at login: " .. e, 1, 0.578, 0);
-    ScriptErrors:Hide();
+    local e = ScriptErrors_Message:GetText()
+    DEFAULT_CHAT_FRAME:AddMessage("Script error at login: " .. e, 1, 0.578, 0)
+    ScriptErrors:Hide()
 end
 
 
 --//////////////////////////////////////////////////////////////////////////--
--- Hacks
+-- Hacks for Video Options dialog
 --//////////////////////////////////////////////////////////////////////////--
 
 --**********************************************************************--
