@@ -20,8 +20,8 @@ The slash commands below are added so you can easily see the lists of resolution
 
 | Command | Resolution List | Output |
 | --- | --- | --- |
-| `/listres` | Original from GetScreenResolutions() | `\<ID>: \<Resolution>` | 
-| `/listfres` | Filtered  | `\<New ID> \[\<Original ID>]: \<Resolution>` |
+| `/listres` | Original from GetScreenResolutions() | `<ID>: <Resolution>` | 
+| `/listfres` | Filtered  | `<New ID> \[<Original ID>]: <Resolution>` |
 
 ## Installation
 
