@@ -2,7 +2,6 @@
 TL;DR: Don’t bother installing this unless you’re getting a Lua error when opening the Video Options dialog and having issues selecting screen resolutions as a result.
 
 ### Fix the UIDROPDOWNMENU_OPEN_MENU error
-o
 When Vanilla WoW is run in a Windows VM (like Parallels), a huge list of possible resolutions may be offered – more than Blizzard’s UI code can deal with. This causes the Lua error below to pop up at login and when the Video Options dialog is opened. Because of this issue, the highest resolutions are not available in the dropdown and require editing config.wtf to access.
 
 `Interface\FrameXML\UIDropDownMenu.lua:156: attempt to concatenate global UIDROPDOWNMENU_OPEN_MENU' (a nil value)`
