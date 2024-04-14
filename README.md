@@ -32,8 +32,7 @@ Use [GitAddonsManager](https://woblight.gitlab.io/overview/gitaddonsmanager/).
 #### Manual instructions
 
 1. Download the code (green **Code** button > **Download ZIP**)
-2. Extract the ZIP to **<Path\To\WoW Folder>\Interface\Addons**
-3. Rename the extracted folder to `ScreenResolutionDropdownFix` (in other words, remove `-master` from the end)
+2. Extract the ZIP file in your Downloads folder and move **!ScreenResolutionDropdownFix** to **<Path\To\WoW Folder>\Interface\Addons**
 
-Once you're done, the folder structure should be **<Path\To\WoW Folder>\Interface\Addons\ScreenResolutionDropdownFix\ScreenResolutionDropdownFix.toc**
+Once you're done, the folder structure should be **<Path\To\WoW Folder>\Interface\Addons\!ScreenResolutionDropdownFix\!ScreenResolutionDropdownFix.toc**
 
