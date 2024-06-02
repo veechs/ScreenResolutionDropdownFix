@@ -1,5 +1,5 @@
 ## Interface: 11200
-## Title: Screen Resolution Dropdown Fix
+## Title: !Screen Resolution Dropdown Fix
 ## Notes: Prevent errors in Video Options when there are more than 32 available screen resolutions
 ## Version: 1.0
 
