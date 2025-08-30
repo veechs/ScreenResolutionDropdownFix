@@ -39,3 +39,6 @@ The slash commands below are added so you can easily see the lists of resolution
 
 #### This is basically a better version of [Hide Script Error Frame At Login](https://github.com/veechs/HideScriptErrorFrameAtLogin/)
 You *do not* need both (but they won't conflict).
+
+#### The repository is archived, but the code should still be functional
+I just don't play WoW anymore.
